@@ -1,4 +1,6 @@
 let calc_key = document.querySelectorAll('.calc_key');
+let element_solution = document.querySelector('.solution');
+let element_result = document.querySelector('.result');
 
 var num1 = '';
 var num2 = '';
@@ -7,6 +9,11 @@ var op = '';
 var result = '';
 
 // console.log(num1)
+
+const display = () => {
+    element_solution.innerHTML = `${num1} ${op} ${num2} ${num3}`
+    element_result.innerHTML = `${result}`
+}
 
 calc_key.forEach(el => {
     el.addEventListener('click', () => {
@@ -41,7 +48,7 @@ calc_key.forEach(el => {
             `)
         }
         else if(el.dataset.key == 'backsp') {
-            if(num1 != '' && result == '') {
+            if(num1 != '' && op == '') {
                 num1 = num1.substring(0, num1.length - 1)
                 console.log(`
                 num1 = ${num1}
@@ -51,7 +58,7 @@ calc_key.forEach(el => {
                 result = ${result}
             `)
             }
-            else if(num2 == '' && result == '') {
+            else if(num2 != '') {
                 num2 = num2.substring(0, num2.length - 1)
                 console.log(`
                 num1 = ${num1}
@@ -60,6 +67,10 @@ calc_key.forEach(el => {
                 op = ${op}
                 result = ${result}
             `)
+            }
+            else if(num3 != '') {
+                num3 = num3.substring(0, num3.length -1)
+                console.log(num3)
             }
             else{
                 result = String(result);
@@ -140,7 +151,9 @@ calc_key.forEach(el => {
             }
             num1 = ''
             num2 = ''
+            num3 = ''
             op = ''
         }
+        display();
     })
 })
