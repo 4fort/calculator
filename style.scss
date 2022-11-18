@@ -1,10 +1,14 @@
 body {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
     margin: 0;
     padding: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgb(49,172,186);
+    background: linear-gradient(210deg, rgba(49,172,186,1) 0%, rgba(255,214,178,1) 100%);
 }
 
 .container {
@@ -16,9 +20,10 @@ body {
         @include design();
 
         height: 80px;
-        border: 2px solid #3a3b3f;
-        padding: 10px;
+        background: #fefefe77;
         text-align: end;
+        padding: 10px;
+        margin-bottom: 2px;
 
         .solution {
             font-size: 18px;
@@ -51,6 +56,7 @@ body {
             font-size: 16px;
             font-weight: 900;
             border: none;
+            background: #fefefe77;
             transition: .1s;
 
             .row2 {
@@ -63,7 +69,7 @@ body {
 
             &:hover {
                 color: #fff;
-                background: #3a3b3f;
+                background: #3a3b3f77;
             }
         }
     }

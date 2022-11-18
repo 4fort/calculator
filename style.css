@@ -1,18 +1,23 @@
 body {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
   margin: 0;
   padding: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgb(49, 172, 186);
+  background: linear-gradient(210deg, rgb(49, 172, 186) 0%, rgb(255, 214, 178) 100%);
 }
 
 .container .screen {
   border-radius: 8px;
   height: 80px;
-  border: 2px solid #3a3b3f;
-  padding: 10px;
+  background: rgba(254, 254, 254, 0.4666666667);
   text-align: end;
+  padding: 10px;
+  margin-bottom: 2px;
 }
 .container .screen .solution {
   font-size: 18px;
@@ -45,6 +50,7 @@ body {
   font-size: 16px;
   font-weight: 900;
   border: none;
+  background: rgba(254, 254, 254, 0.4666666667);
   transition: 0.1s;
 }
 .container .buttons button .row2 {
@@ -55,5 +61,5 @@ body {
 }
 .container .buttons button:hover {
   color: #fff;
-  background: #3a3b3f;
+  background: rgba(58, 59, 63, 0.4666666667);
 }/*# sourceMappingURL=style.css.map */
