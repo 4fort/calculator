@@ -2,6 +2,7 @@ let calc_key = document.querySelectorAll('.calc_key');
 
 var num1 = '';
 var num2 = '';
+var num3 = ''
 var op = '';
 var result = '';
 
@@ -9,11 +10,22 @@ var result = '';
 
 calc_key.forEach(el => {
     el.addEventListener('click', () => {
-        if(el.dataset.key == 'num' && op == '') {
-            num1 += el.value;
+        if(el.dataset.key == 'num') {
+            if(op == '') {
+                num1 += el.value;
+            }
+            else if(num1 != '' && op != '') {
+                num2 += el.value;
+                result = ''
+            }
+            else {
+                num3 += el.value
+            }
+
             console.log(`
                 num1 = ${num1}
                 num2 = ${num2}
+                num3 = ${num3}
                 op = ${op}
                 result = ${result}
             `)
@@ -23,15 +35,7 @@ calc_key.forEach(el => {
             console.log(`
                 num1 = ${num1}
                 num2 = ${num2}
-                op = ${op}
-                result = ${result}
-            `)
-        }
-        else if(el.dataset.key == 'num' && num1 != '' && op != '') {
-            num2 += el.value;
-            console.log(`
-                num1 = ${num1}
-                num2 = ${num2}
+                num3 = ${num3}
                 op = ${op}
                 result = ${result}
             `)
@@ -42,6 +46,7 @@ calc_key.forEach(el => {
                 console.log(`
                 num1 = ${num1}
                 num2 = ${num2}
+                num3 = ${num3}
                 op = ${op}
                 result = ${result}
             `)
@@ -51,6 +56,7 @@ calc_key.forEach(el => {
                 console.log(`
                 num1 = ${num1}
                 num2 = ${num2}
+                num3 = ${num3}
                 op = ${op}
                 result = ${result}
             `)
@@ -61,6 +67,7 @@ calc_key.forEach(el => {
                 console.log(`
                 num1 = ${num1}
                 num2 = ${num2}
+                num3 = ${num3}
                 op = ${op}
                 result = ${result}
             `)
@@ -73,24 +80,25 @@ calc_key.forEach(el => {
             result = ''
             console.log('cleared')
         }
-        else if(el.dataset.key == 'equals' && num2 != '' && num1 != '' && op != '') {
+        else if(el.dataset.key == 'equals' && op != '') {
             num1 = Number(num1);
             num2 = Number(num2);
+            num3 = Number(num3);
             
             if(result != '') {
                 result = Number(result);
                 switch (op){
                     case '+':
-                        result = result + num2;
+                        result = result + num3;
                     break;
                     case '-':
-                        result = result - num2;
+                        result = result - num3;
                     break;
                     case '*':
-                        result = result * num2;
+                        result = result * num3;
                     break;
                     case '/':
-                        result = result / num2;
+                        result = result / num3;
                     break;
                     default:
                         result = 'Syntax Error';
@@ -99,6 +107,7 @@ calc_key.forEach(el => {
                 console.log(`
                 num1 = ${num1}
                 num2 = ${num2}
+                num3 = ${num3}
                 op = ${op}
                 result = ${result}
             `)
@@ -124,11 +133,12 @@ calc_key.forEach(el => {
                 console.log(`
                 num1 = ${num1}
                 num2 = ${num2}
+                num3 = ${num3}
                 op = ${op}
                 result = ${result}
             `)
             }
-            // num1 = ''
+            num1 = ''
             num2 = ''
             op = ''
         }
