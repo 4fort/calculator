@@ -12,9 +12,9 @@ body {
 }
 
 .container .screen {
+  background: rgba(254, 254, 254, 0.4666666667);
   border-radius: 8px;
   height: 80px;
-  background: rgba(254, 254, 254, 0.4666666667);
   text-align: end;
   padding: 10px;
   margin-bottom: 2px;
@@ -44,6 +44,7 @@ body {
   gap: 2px;
 }
 .container .buttons button {
+  background: rgba(254, 254, 254, 0.4666666667);
   border-radius: 8px;
   width: 80px;
   height: 80px;
@@ -53,13 +54,19 @@ body {
   background: rgba(254, 254, 254, 0.4666666667);
   transition: 0.1s;
 }
-.container .buttons button .row2 {
-  justify-items: stretch;
-}
-.container .buttons button .calc_key-number {
-  background-color: #3a3b3f;
-}
 .container .buttons button:hover {
   color: #fff;
   background: rgba(58, 59, 63, 0.4666666667);
+}
+.container .buttons .clear, .container .buttons .op, .container .buttons .backsp {
+  background: rgba(239, 239, 239, 0.4666666667);
+}
+.container .buttons .equal {
+  background: rgba(49, 172, 186, 0.77);
+  background: linear-gradient(210deg, rgba(49, 172, 186, 0.77) 0%, rgba(255, 214, 178, 0.77) 100%) 50%/200%;
+  transition: 0.3s;
+}
+.container .buttons .equal:hover {
+  background: rgba(49, 172, 186, 0.77);
+  background: linear-gradient(210deg, rgba(49, 172, 186, 0.77) 55%, rgba(255, 214, 178, 0.77) 100%) 100%/200%;
 }/*# sourceMappingURL=style.css.map */

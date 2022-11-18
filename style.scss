@@ -13,6 +13,7 @@ body {
 
 .container {
     @mixin design {
+        background: #fefefe77;
         border-radius: 8px;
     }
 
@@ -20,7 +21,6 @@ body {
         @include design();
 
         height: 80px;
-        background: #fefefe77;
         text-align: end;
         padding: 10px;
         margin-bottom: 2px;
@@ -58,18 +58,24 @@ body {
             border: none;
             background: #fefefe77;
             transition: .1s;
-
-            .row2 {
-                justify-items: stretch;
-            }
-
-            .calc_key-number {
-                background-color: #3a3b3f;
-            }
-
             &:hover {
                 color: #fff;
                 background: #3a3b3f77;
+            }
+        }
+
+        .clear, .op, .backsp {
+            background: #efefef77;
+        }
+
+        .equal {
+            background: rgb(49,172,186,.77);
+            background: linear-gradient(210deg, rgba(49,172,186,.77) 0%, rgba(255,214,178,.77) 100%) 50% / 200%;
+            transition: .3s;
+
+            &:hover {
+                background: rgb(49,172,186,.77);
+                background: linear-gradient(210deg, rgba(49,172,186,.77) 55%, rgba(255,214,178,.77) 100%) 100% / 200%;
             }
         }
     }
