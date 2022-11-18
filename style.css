@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .screen {
+  border-radius: 8px;
+  height: 80px;
+  border: 2px solid #3a3b3f;
+}
+.container .clear {
+  grid-area: key_clear;
+  width: auto !important;
+}
+.container .backsp {
+  grid-area: key_backsp;
+}
+.container .op .row1 {
+  grid-area: key_divide;
+}
+.container .op .row2 {
+  grid-area: key_multiply;
+}
+.container .buttons {
+  display: grid;
+  grid-template-areas: "key_clear key_clear key_backsp key_divide" "auto auto auto key_multiply";
+  gap: 2px;
+}
+.container .buttons button {
+  border-radius: 8px;
+  width: 80px;
+  height: 80px;
+  font-size: 16px;
+  font-weight: 900;
+  border: none;
+  transition: 0.1s;
+}
+.container .buttons button .row2 {
+  justify-items: stretch;
+}
+.container .buttons button .calc_key-number {
+  background-color: #3a3b3f;
+}
+.container .buttons button:hover {
+  color: #fff;
+  background: #3a3b3f;
+}/*# sourceMappingURL=style.css.map */
