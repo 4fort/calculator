@@ -154,6 +154,19 @@ calc_key.forEach(el => {
             num3 = ''
             op = ''
         }
+
+        if(el.dataset.key == 'int') {
+            if(num1 != '' && op == '') {
+                num1 = num1 * -1;
+            }
+            else if(num2 != '') {
+                num2 = num2 * -1;
+            }
+            else if(num3 != '') {
+                num3 = num3 * -1;
+            }
+        }
+        
         display();
     })
 })
