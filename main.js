@@ -37,7 +37,7 @@ calc_key.forEach(el => {
                 result = ${result}
             `)
         }
-        else if(el.dataset.key == 'op') {
+        else if(el.dataset.key == 'op' && (result != '' || num1 != '')) {
             op = el.value
             console.log(`
                 num1 = ${num1}
@@ -149,6 +149,11 @@ calc_key.forEach(el => {
                 result = ${result}
             `)
             }
+
+            if(result == Infinity) {
+                result = 'Cannot be divided by 0';
+            }
+
             num1 = ''
             num2 = ''
             num3 = ''
