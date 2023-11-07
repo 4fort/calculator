@@ -49,7 +49,11 @@ calc_key.forEach(el => {
         }
         else if(el.dataset.key == 'backsp') {
             if(num1 != '' && op == '') {
-                num1 = num1.substring(0, num1.length - 1)
+                if(num1 != '') {
+                    num1 = num1.substring(0, num1.length - 1)
+                } else {
+                    op = '';
+                }
                 console.log(`
                 num1 = ${num1}
                 num2 = ${num2}
